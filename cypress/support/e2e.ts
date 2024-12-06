@@ -22,14 +22,9 @@ import './api-commands'
 declare global {
     namespace Cypress {
         interface Chainable {
-            /**
-             * Signup a user
-             * @param username The username
-             * @param password The password
-             * @returns The response
-             */
             postSignup(username: string, password: string): Chainable<Response<any>>
             postLogin(username: string, password: string): Chainable<Response<any>>
+            loginNewRandomUser(): Chainable<void>
         }
     }
 }
